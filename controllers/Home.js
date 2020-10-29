@@ -1,5 +1,5 @@
 export default class Home {
 	constructor() {
-		this.view = 'views/home.html';
+		this.view = '../views/home.html';
 	}
 }

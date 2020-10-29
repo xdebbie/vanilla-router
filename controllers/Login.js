@@ -1,5 +1,5 @@
 export default class Login {
 	constructor() {
-		this.view = 'views/login.html';
+		this.view = '../views/login.html';
 	}
 }
