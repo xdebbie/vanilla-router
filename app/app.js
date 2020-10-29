@@ -10,13 +10,16 @@ let app = {
 	mvc: {
 		router: null,
 		dispatchRoute(controller) {
-			if (controller.view === undefined) {
-				throw new Error('Please define a view for the controller');
-			} else {
-				fetch(`View/${controller.view}.html`).then((response) =>
-					console.log(response.text)
-				);
+			// Fetch the views' content to each route
+			if (controller.hasOwnProperty('view') !== true) {
+				throw new Error("The view hasn't been registered");
 			}
+
+			fetch(controller.view)
+				.then((response) => response.text())
+				.then((html) => {
+					document.querySelector('main.container').innerHTML = html;
+				});
 		},
 	},
 };
