@@ -1,6 +1,39 @@
-<h2>SEARCH PAGE</h2>
+<h2>SEARCH</h2>
+<form id="searchpage">
+    <div>
+        <div>
+            <label for="searchinput">Search input</label>
+            <input type="search" id="searchinput" name="searchinput" placeholder="Event's name...">
+        </div>
+        <div>
+            <label for="year">Event's year</label>
+            <select id="year" name="year">
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </select>
+        </div>
+        <div>
+            <label for="sort">Sort by</label>
+            <select id="sort" name="sort">
+                <option value="dateasc">Date (asc)</option>
+                <option value="datedesc">Date (desc)</option>
+                <option value="title">Title</option>
+            </select>
+        </div>
+    </div>
+    <input type="submit" value="Search" id="submit">
+</form>
+<hr>
 
-<p>L'application qui permet de rechercher des événements Parisiens et de les ajouter en favoris.</p>
+<template id="event--template">
+    <div>
+        <h6 class="event--title"></h6>
+        <img class="event--image" src="">
+    </div>
+</template>
 
-<p>Pour commencer une recherche, utilisez le menu ci-dessus ou <a href="/#/search">cliquez ici</a>.</p>
-</html>
+<div class="event--list">
+    <!-- Results -->
+</div>

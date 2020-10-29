@@ -19,6 +19,9 @@ let app = {
 				.then((response) => response.text())
 				.then((html) => {
 					document.querySelector('main.container').innerHTML = html;
+					if (typeof controller.executeHttpRequest === 'function') {
+						controller.executeHttpRequest();
+					}
 				});
 		},
 	},
