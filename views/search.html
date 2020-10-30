@@ -17,8 +17,8 @@
         <div>
             <label for="sort">Sort by</label>
             <select id="sort" name="sort">
-                <option value="dateasc">Date (asc)</option>
-                <option value="datedesc">Date (desc)</option>
+                <option value="date_start">Date (asc)</option>
+                <option value="-date_start">Date (desc)</option>
                 <option value="title">Title</option>
             </select>
         </div>
@@ -27,13 +27,13 @@
 </form>
 <hr>
 
-<template id="event--template">
+<template id="event-template">
     <div>
-        <h6 class="event--title"></h6>
-        <img class="event--image" src="">
+        <h6 class="event-title"></h6>
+        <img class="event-image" src="">
     </div>
 </template>
 
-<div class="event--list">
+<div class="event-list">
     <!-- Results -->
 </div>

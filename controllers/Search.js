@@ -1,4 +1,5 @@
 import OpenDataParis from '../models/OpenDataParis.js';
+import app from '../app/app.js';
 
 export default class Search {
 	constructor() {
@@ -21,17 +22,7 @@ export default class Search {
 						document.querySelector('#sort').value
 					)
 					.then((data) => {
-						// A partir du template (id="event-template") créer les différents évnements
-						let template = document.querySelector(
-							'#event-template'
-						);
-						let clone = document.importNode(template.content, true);
-						clone.querySelector('.event-title').textContent =
-							'Hello'; // le title de l'image
-						clone.querySelector('.event-image').src = 'toto.jpg'; // L'url de l'image
-						document
-							.querySelector('.event-list')
-							.appendChild(clone);
+						app.dom.addEvents(data);
 					});
 			});
 	}
